@@ -1,0 +1,22 @@
+<div>
+  <h1>All Items</h1>
+</div>
+
+<div>
+    <%= form_with url: "/items", method: :get, local: true do |f| %>
+    <%= f.label :search, "Search" %>
+    <%= f.text_field :search %>
+    <%= f.submit "Search" %>
+    <% end %>
+    <%= link_to "Add A New Item", "items/new" %>
+</div>
+
+<div>
+  <% @items.each do |item| %>
+    <h3><%= item.name %></h3>
+    <p>Description: <%= item.description %></p>
+    <p>Price: <%= number_to_currency(item.format_price) %></p>
+    <%= link_to "Edit #{item.name}", "/items/#{item.id}/edit" %>
+    <%= link_to "Delete #{item.name}", "/items/#{item.id}", method: :delete %>
+  <% end %>
+</div>
