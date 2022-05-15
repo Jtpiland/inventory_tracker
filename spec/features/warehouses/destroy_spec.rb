@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Warehouse Index' do
+RSpec.describe 'Warehouse Destroy' do
   before :each do
     @warehouse = FactoryBot.create(:warehouse)
   end

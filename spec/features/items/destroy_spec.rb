@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'faker'
 
-RSpec.describe 'Item Index' do
+RSpec.describe 'Item Destroy' do
   before :each do
     @item = FactoryBot.create(:item)
   end
