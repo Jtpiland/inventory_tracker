@@ -1,0 +1,13 @@
+<h1>New Inventory Item</h1>
+<%= form_with url: "/inventory_items", method: :post, local: true do |f| %>
+  <%= f.label :item %>
+  <%= f.select :item, @items %>
+
+  <%= f.label :warehouse %>
+  <%= f.select :warehouse, @warehouses %>
+
+  <%= f.label :quantity %>
+  <%= f.number_field :quantity %>
+
+  <%= f.submit %>
+<% end %>

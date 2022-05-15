@@ -4,7 +4,7 @@ RSpec.describe 'inventory_item creation' do
   before :each do
     @item = FactoryBot.create(:item)
     @warehouse = FactoryBot.create(:warehouse)
-  end 
+  end
 
   describe 'the inventory_item new' do
     it 'renders the new form' do
