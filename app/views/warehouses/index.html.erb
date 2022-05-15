@@ -1,0 +1,8 @@
+<h1>Warehouses</h1>
+<div>
+  <%@warehouses.each do |warehouse|%>
+    <h3><%= warehouse.name %></h3>
+    <p>City: <%= warehouse.city %></p>
+    <p>State: <%= warehouse.state %></p>
+  <% end %>
+</div>

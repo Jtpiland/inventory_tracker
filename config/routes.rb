@@ -9,4 +9,9 @@ Rails.application.routes.draw do
   get '/items/:id/edit', to: 'items#edit'
   patch '/items/:id', to: 'items#update'
   delete '/items/:id', to: 'items#destroy'
+
+  get '/warehouses', to: 'warehouses#index'
+  get '/warehouses/new', to: 'warehouses#new'
+  post '/warehouses', to: 'warehouses#create'
+  delete '/warehouses/:id', to: 'warehouses#destroy'
 end
