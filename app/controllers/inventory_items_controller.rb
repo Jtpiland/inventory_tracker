@@ -56,6 +56,11 @@ class InventoryItemsController < ApplicationController
     end
   end
 
+  def destroy
+    InventoryItem.find(params[:id]).destroy
+    redirect_to '/inventory_items'
+  end
+
   private
 
   def inventory_item_params

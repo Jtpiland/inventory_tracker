@@ -2,28 +2,23 @@
   <h1>Inventory Items</h1>
 </div>
 
-
-  <%# <% @inventory_items.each do |inventory_item| %>
-    <%# <h3><%= inventory_item.id %></h3> 
-    <%# <p>quantity: <%= inventory_item.quantity %></p> 
-    <%# <%= link_to "Edit #{item.name}", "/inventory_items/#{item.id}/edit" %> 
-    <%# <%= link_to "Delete #{item.name}", "/inventory_items/#{item.id}", method: :delete %> 
-  <%# <% end %> 
-
-
 <table>
   <tr>
     <th>Id</th>
     <th>Item Name</th>
     <th>Quantity</th>
     <th>Warehouse</th>
+    <th></th>
+    <th></th>
   </tr>
   <% @inventory_items.each do |inventory_item| %>
   <tr>
     <td><%= inventory_item.id %></td>
-    <td><%= inventory_item.item.name %></td>
+    <td><%= link_to "#{inventory_item.item.name}", "/items/#{inventory_item.item.id}" %></td>
     <td><%= inventory_item.quantity %></td>
     <td><%= inventory_item.warehouse.name %></td>
+    <td><%= link_to "Edit", "/inventory_items/#{inventory_item.id}/edit" %></td>
+    <td><%= link_to "Delete", "/inventory_items/#{inventory_item.id}", method: :delete %></td>
   </tr>
   <% end %>
 </table>
