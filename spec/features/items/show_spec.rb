@@ -15,8 +15,6 @@ RSpec.describe 'Item Show' do
       expect(page).to have_content(@item.description)
       expect(page).to have_content("$#{@item.format_price}")
       expect(page).to_not have_content(@item2.name)
-      expect(page).to_not have_content(@item2.description)
-      expect(page).to_not have_content("$#{@item2.format_price}")
     end
   end
 end
