@@ -15,16 +15,16 @@ RSpec.describe 'InventoryItem Index' do
 
       expect(page).to have_content(@inventoryitem.id)
       expect(page).to have_content(@inventoryitem.quantity)
-      expect(page).to have_content(@inventoryitem.item_name)
-      expect(page).to have_content(@inventoryitem.warehouse)
+      expect(page).to have_content(@inventoryitem.item.name)
+      expect(page).to have_content(@inventoryitem.warehouse.name)
       expect(page).to have_content(@inventoryitem2.id)
       expect(page).to have_content(@inventoryitem2.quantity)
-      expect(page).to have_content(@inventoryitem2.item_name)
-      expect(page).to have_content(@inventoryitem2.warehouse)
+      expect(page).to have_content(@inventoryitem2.item.name)
+      expect(page).to have_content(@inventoryitem2.warehouse.name)
       expect(page).to have_content(@inventoryitem3.id)
       expect(page).to have_content(@inventoryitem3.quantity)
-      expect(page).to have_content(@inventoryitem3.item_name)
-      expect(page).to have_content(@inventoryitem2.warehouse)
+      expect(page).to have_content(@inventoryitem3.item.name)
+      expect(page).to have_content(@inventoryitem2.warehouse.name)
     end
   end
 end
