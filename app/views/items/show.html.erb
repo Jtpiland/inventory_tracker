@@ -1,0 +1,6 @@
+<h1><%= @item.name %></h1>
+<h3><%= @item.description %></h3>
+<h3><%= number_to_currency(@item.format_price) %></h3>
+
+<p><%= link_to "Update #{@item.name}", "/items/#{@item.id}/edit" %></p>
+<p><%= button_to "Delete #{@item.name}", "/items/#{@item.id}", method: :delete %></p>
