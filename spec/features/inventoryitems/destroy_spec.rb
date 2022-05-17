@@ -11,7 +11,7 @@ RSpec.describe 'Inventory Item Destroy' do
     it 'destroys the item' do
       visit '/inventory_items'
 
-      click_on "Delete #{@inventory_item.name}"
+      click_on "Delete"
 
       expect(page).to_not have_content(@inventory_item.item.name)
       expect(page).to_not have_content(@inventory_item.warehouse.name)
